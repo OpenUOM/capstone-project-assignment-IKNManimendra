@@ -138,8 +138,10 @@ const addStudent = async (id, name, age, hometown) => {
     });
 }
 
-const updateStudent = async (name, age, religion, id) => {
-    const sql = `SELECT * FROM dummyData`
+const updateStudent = async (name, age, hometown, id) => {
+    const sql = `UPDATE student
+    SET name = "${name}", age = ${age}, hometown = "${hometown}"
+    WHERE id=${id}`;
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql)
