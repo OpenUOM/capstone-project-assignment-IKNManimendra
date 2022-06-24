@@ -1,14 +1,14 @@
 const dbConnection = require("./sqlite");
 
 dbConnection
-  .getDbConnection()
-  .then((db) => {
-    init(db);
-  })
-  .catch((err) => {
-    console.log(err);
-    throw err;
-  });
+    .getDbConnection()
+    .then((db) => {
+        init(db);
+    })
+    .catch((err) => {
+        console.log(err);
+        throw err;
+    });
 
 let _db;
 
@@ -79,7 +79,8 @@ const updateTeacher = async (name, age, id) => {
 }
 
 const deleteTeacher = async (id) => {
-    const sql = `SELECT * FROM dummyData`
+    console.log("deleteTeacher from database.js");
+    const sql = `DELETE FROM teacher WHERE id=${id}`;
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql)
@@ -146,7 +147,7 @@ const updateStudent = async (name, age, religion, id) => {
                 reject(error);
             });
     });
-} 
+}
 
 const deleteStudent = async (id) => {
     const sql = `SELECT * FROM dummyData`

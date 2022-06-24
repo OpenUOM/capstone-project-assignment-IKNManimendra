@@ -42,6 +42,8 @@ export class AppServiceService {
   }
 
   deleteTeacher(payload: Object){
+    console.log("deleteTeacher from app-service.services.ts")
+    console.log("id from app-service.services.ts", payload)
     return this.http.post(`/${this.ROOT_URL}/deleteTeacher`, payload)
   }
 
