@@ -17,7 +17,6 @@ const routes: Routes = [
   { path: 'addStudent', component: AddNewStudentComponent },
   { path: 'editStudent', component: EditStudentComponent },
   { path: 'editTeacher', component: EditTeacherComponent },
- // { path: 'deleteTeacher', component: TeacherTableComponent }//
 ];
 console.log("app.routing.module.ts")
 @NgModule({

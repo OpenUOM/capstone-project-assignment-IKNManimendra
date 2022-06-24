@@ -114,7 +114,7 @@ app.post("/addStudent", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-app.delete("/deleteStudent", async function (req, res) {
+app.post("/deleteStudent", async function (req, res) {
   console.log("app.post /deleteStudent from server.js")
   let reqBody = req.body;
   console.log(
