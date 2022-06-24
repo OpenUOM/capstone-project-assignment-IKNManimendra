@@ -23,7 +23,7 @@ const dbinitialize = async () => {
 }
 
 const readTeachers = async () => {
-    const sql = `SELECT * FROM dummyData`
+    const sql = `SELECT * FROM teacher`;
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql)
@@ -79,7 +79,7 @@ const updateTeacher = async (name, age, id) => {
 }
 
 const deleteTeacher = async (id) => {
-    console.log("deleteTeacher from database.js");
+    // console.log("deleteTeacher from database.js");
     const sql = `DELETE FROM teacher WHERE id=${id}`;
     return new Promise((resolve, reject) => {
         knex_db
